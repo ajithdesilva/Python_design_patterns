@@ -1,6 +1,6 @@
 ############################################################################################
 #   File            :   configuration.py
-#   Author          :   Ajith de Silva
+#   Author          :   Ajith de Silva (ajithdesilva@gmail.com)
 #   Created         :   2025-11-06
 #   Last Modified   :   2025-11-06
 #   Version         :   1.0.0
@@ -26,6 +26,8 @@ class Configuration(object):
     """
 
     __instance = None   ### private fields to hold instance
+    
+    ### private fields to store values
     _min=0
     _max=0
     _logfile=""

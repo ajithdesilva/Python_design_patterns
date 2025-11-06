@@ -1,6 +1,6 @@
 ############################################################################################
 #   File            :   singleton.py
-#   Author          :   Ajith de Silva
+# #   Author        :   Ajith de Silva (ajithdesilva@gmail.com)
 #   Created         :   2025-11-06
 #   Last Modified   :   2025-11-06
 #   Version         :   1.0.0
