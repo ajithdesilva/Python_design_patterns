@@ -1,0 +1,8 @@
+# Source - https://stackoverflow.com/questions/3719243/best-practices-for-adding-gitignore-file-for-python-projects
+# Posted by ewall
+# Retrieved 2025-11-06, License - CC BY-SA 4.0
+
+*.pyc
+*.pyo
+__pycache__/
+*.py[cod]
