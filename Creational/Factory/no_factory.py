@@ -1,16 +1,15 @@
 ############################################################################################
-#   File            :   factory.py
+#   File            :   no_factory.py
 #   Author          :   Ajith de Silva (ajithdesilva@gmail.com)
 #   Created         :   2025-11-06
 #   Last Modified   :   2025-11-06
 #   Version         :   1.0.0
 ############################################################################################
 #   Description:
-#       This module defines a Factory class that ensures
-#       Only one instance of itself can exist throughout the program's lifecycle.
-#       Low coupling between client code and concrete shape classes.
-#       Maintains a central place to create shape objects.
-#       Expandable to add new shapes without modifying client code.
+#       This module shows shape classes without using Factory pattern.
+#       High coupling between client code and concrete shape classes.
+#       Client code needs to know about all shape classes to create instances.
+#       Difficult to add new shapes without modifying client code.
 #
 #-------------------------------------------------------------------------------------------
 # License:
@@ -20,8 +19,6 @@
 ############################################################################################
 
 from abc import ABC, abstractmethod
-
-
 
 class Shape(ABC):
     """base class for all shapes. """
@@ -48,44 +45,18 @@ class Triangle(Shape):
         print("Drawing a Triangle 🔺")
 
 
-# Factory class encapsulates all shapes instanciation
-class ShapeFactory:
-
-    @staticmethod
-    def get_shape(shape_type: str) -> Shape:
-        """
-        Factory method to create & return a Shape object.
-
-        Args:
-            shape_type (str): Type of shape ("circle", "square", "triangle").
-
-        Returns:
-            Shape: An instance of the requested shape class.
-        """
-        shape_type = shape_type.lower()
-        if shape_type == "circle":
-            return Circle()
-        elif shape_type == "square":
-            return Square()
-        elif shape_type == "triangle":
-            return Triangle()
-        else:
-            raise ValueError(f"Unknown shape type: {shape_type}")
-
 
 
 if __name__ == "__main__":
-    print(" Factory Example ")
+    print(" No Factory Example ")
     
-    factory = ShapeFactory()    # Create factory instance
-
-    _circle_shape = factory.get_shape("circle") ### create instance by passing required type
+    _circle_shape = Circle() ### create Circle instance
     _circle_shape.draw()
 
-    _triangle_shape = factory.get_shape("triangle") ### create instance by passing required type
+    _triangle_shape = Triangle() ### create Triangle instance
     _triangle_shape.draw()
 
-    _square_shape = factory.get_shape("square") ### create instance by passing required type
+    _square_shape = Square() ### create Square by passing required type
     _square_shape.draw()
 
 

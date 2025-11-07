@@ -8,6 +8,8 @@
 #   Description:
 #       This module defines a Singleton class that ensures
 #       Only one instance of itself can exist throughout the program's lifecycle.
+#       Provides a global access point to that instance.
+#       Well organized code with low coupling.
 #
 #-------------------------------------------------------------------------------------------
 # License:
