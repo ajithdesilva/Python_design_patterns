@@ -58,5 +58,3 @@ if __name__ == "__main__":
 
     _square_shape = Square() ### create Square by passing required type
     _square_shape.draw()
-
-
