@@ -31,6 +31,7 @@ class Configuration(object):
     _min=0
     _max=0
     _logfile=""
+    _db_connection_str=""
 
     def __new__(cls, val=None):
         ### stop creating a new instance directly
@@ -62,6 +63,7 @@ class Configuration(object):
         self._max = 50
         self._min=10
         self._logfile="/var/log/app.log"
+        self._db_connection_str="this is DB connection string"
 
         ### do further initialization here
 
@@ -77,4 +79,6 @@ class Configuration(object):
     def LogFilePath(self):
         return self._logfile
 
-
+    @property
+    def DB_Connection_Str(self):
+        return self._db_connection_str

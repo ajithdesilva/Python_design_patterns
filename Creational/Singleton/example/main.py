@@ -27,7 +27,8 @@ if __name__=="__main__":
     print(
     "\t\nMin => ",_configuration.Min,
     "\t\nMax => ",_configuration.Max,
-    "\t\nLog File=> ",_configuration.LogFilePath
+    "\t\nLog File=> ",_configuration.LogFilePath,
+    "\t\nDB Str =>",_configuration.DB_Connection_Str
     )
     
     _configuration=None

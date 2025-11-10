@@ -64,7 +64,8 @@ if __name__=="__main__":
     
     s1 = MySingletonClass.getInstance()
     s2 = MySingletonClass.getInstance()
+    s3=MySingletonClass()
 
     print(s1 is s2)  # True
     print("s1.value -> ",s1.val) 
-    print("s1.value -> ",s1.val) 
+    print("s2.value -> ",s2.val) 
